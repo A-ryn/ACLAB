@@ -18,10 +18,7 @@ int main() {
     printf("Enter plaintext (uppercase, even length): ");
     scanf("%99s", text);
 
-    if (strlen(text) % 2 != 0) {
-        printf("Length must be even.\n");
-        return 1;
-    }
+   
 
     transform(text, enc, key);
     transform(enc, dec, inv);
